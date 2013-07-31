@@ -1,0 +1,11 @@
+# Patterns to be ignored by git
+
+# Ophrys custom files
+ophrys_custom/
+
+# Virtual Python Environment builder
+.virtualenv/
+.venv/
+
+# Python cache files
+__pycache__/
