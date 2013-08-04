@@ -1,0 +1,10 @@
+language: python
+python:
+  - "3.3"
+  - "3.2"
+install:
+  - pip install https://www.djangoproject.com/download/1.6b1/tarball/
+  - pip install -r requirements.txt --use-mirrors
+  - python create_custom_directory.py
+script:
+  - python manage.py test

@@ -5,6 +5,11 @@
 Simple Association Web Content Management System
 ================================================
 
+.. image:: https://travis-ci.org/Ophrys-Project/Ophrys.png?branch=master
+   :alt: Build Status
+   :target: https://travis-ci.org/Ophrys-Project/Ophrys
+
+
 What is Ophrys?
 ---------------
 
