@@ -9,3 +9,6 @@ ophrys_custom/
 
 # Python cache files
 __pycache__/
+
+# Build documentation
+docs/_build/
