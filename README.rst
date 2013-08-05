@@ -44,3 +44,17 @@ To start Django's development server, run the following command::
   $ python manage.py runserver
 
 Good luck.
+
+
+Used Software
+-------------
+
+Ophrys uses:
+
+* `Python Programming Language`_
+* `Django`_
+* `Sphinx – Python Documentation Generator`_
+
+.. _Python Programming Language: http://python.org/
+.. _Django: https://www.djangoproject.com/
+.. _Sphinx – Python Documentation Generator: http://sphinx-doc.org/
