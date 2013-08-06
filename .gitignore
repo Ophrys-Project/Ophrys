@@ -12,3 +12,7 @@ __pycache__/
 
 # Build documentation
 docs/_build/
+
+# Coverage (Code coverage measurement for Python) report files (binary and html)
+.coverage
+coverage_html_report/
