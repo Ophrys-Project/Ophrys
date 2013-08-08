@@ -1,0 +1,8 @@
+# Configuration file for Coverage (Code coverage measurement for Python)
+
+[run]
+source = ophrys
+branch = True
+
+[html]
+directory = coverage_html_report
