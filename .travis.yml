@@ -8,4 +8,6 @@ install:
   - python create_custom_directory.py
 script:
   - pep8 --max-line-length=150 ophrys
-  - python manage.py test
+  - pep8 --max-line-length=150 tests
+  - coverage run manage.py test
+  - coverage report --show-missing --fail-under=100
