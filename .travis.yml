@@ -9,5 +9,5 @@ install:
 script:
   - pep8 --max-line-length=150 ophrys
   - pep8 --max-line-length=150 tests
-  - coverage run manage.py test
+  - coverage run manage.py test --settings="tests.settings"
   - coverage report --show-missing --fail-under=100

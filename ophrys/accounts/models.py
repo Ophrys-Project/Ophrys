@@ -6,27 +6,37 @@ from django.utils import timezone
 from ophrys.utils.models import GetAbsoluteUrlMixin
 
 
-class UserManager(PermissionsMixin, BaseUserManager):
+class UserManager(BaseUserManager):
+    """
+    Custom manager for the custom user.
+    """
     def create_user(self, email, password=None, **extra_fields):
         """
-        Creates and saves a User with the given email and password.
+        Creates and saves an user with the given email and password.
         """
-        now = timezone.now()
         if not email:
             raise ValueError('The given email must be set.')
         email = UserManager.normalize_email(email)
-        user = self.model(email=email, last_login=now,
+        user = self.model(email=email,
+                          last_login=timezone.now(),
                           **extra_fields)
         user.set_password(password)
         user.save(using=self._db)
         return user
 
     def create_superuser(self, email, password, is_superuser=True, **extra_fields):
-        return self.create_user(email, password, is_superuser=is_superuser,
+        """
+        Creates and saves a superuser with the given email and password.
+        """
+        return self.create_user(email, password,
+                                is_superuser=is_superuser,
                                 **extra_fields)
 
 
-class User(GetAbsoluteUrlMixin, AbstractBaseUser):
+class User(GetAbsoluteUrlMixin, PermissionsMixin, AbstractBaseUser):
+    """
+    Custom user model.
+    """
     email = models.EmailField(max_length=254, unique=True, db_index=True)
     is_active = models.BooleanField(default=True)  # blank=True
     date_joined = models.DateTimeField(auto_now_add=True)
@@ -40,7 +50,7 @@ class User(GetAbsoluteUrlMixin, AbstractBaseUser):
         return self.email
 
     def get_full_name(self):
-        return 'Full: %s' % self.email
+        return 'Full name: %s' % self.email
 
     def get_short_name(self):
-        return 'Short: %s' % self.email
+        return 'Short name: %s' % self.email

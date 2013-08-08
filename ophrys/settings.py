@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Django settings for ophrys project.
 
@@ -58,6 +57,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
-# Other
+# Authentication setting
 
 AUTH_USER_MODEL = 'accounts.User'

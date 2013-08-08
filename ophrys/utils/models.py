@@ -2,6 +2,11 @@ from django.core.urlresolvers import reverse, NoReverseMatch
 
 
 class GetAbsoluteUrlMixin(object):
+    """
+    Mixin to add the method get_absolute_url() to a model class. The method
+    looks for an url name matching to the current model and the given
+    url_name like 'detail', 'update' or 'delete'.
+    """
     def get_absolute_url(self, url_name='detail'):
         class_name = type(self).__name__
         module_name = type(self).__module__
