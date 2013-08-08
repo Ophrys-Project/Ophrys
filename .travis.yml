@@ -7,4 +7,5 @@ install:
   - pip install -r requirements.txt --use-mirrors
   - python create_custom_directory.py
 script:
+  - pep8 --max-line-length=150 ophrys
   - python manage.py test
