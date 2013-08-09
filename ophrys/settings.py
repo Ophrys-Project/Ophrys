@@ -23,6 +23,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ophrys.accounts',
+    'ophrys.calendarevent',
 )
 
 MIDDLEWARE_CLASSES = (
