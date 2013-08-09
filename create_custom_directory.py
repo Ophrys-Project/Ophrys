@@ -1,12 +1,8 @@
-# -*- coding: utf-8 -*-
-
 import base64
 import os
 
 
-SETTINGS_CONTENT = """# -*- coding: utf-8 -*-
-#
-# Custom settings for ophrys project.
+SETTINGS_CONTENT = """# Custom settings for ophrys project.
 #
 # For more information on this file, see
 # https://docs.djangoproject.com/en/dev/topics/settings/

@@ -43,6 +43,9 @@ To start Django's development server, run the following command::
 
   $ python manage.py runserver
 
+To run the pep8 style guide checker and the tests, have a look at the
+commands you find in the .travis.yml file.
+
 Good luck.
 
 
@@ -53,8 +56,12 @@ Ophrys uses:
 
 * `Python Programming Language`_
 * `Django`_
-* `Sphinx – Python Documentation Generator`_
+* `Pep8 (Python style guide checker)`_
+* `Coverage (Code coverage measurement for Python)`_
+* `Sphinx (Python Documentation Generator)`_
 
 .. _Python Programming Language: http://python.org/
 .. _Django: https://www.djangoproject.com/
-.. _Sphinx – Python Documentation Generator: http://sphinx-doc.org/
+.. _Pep8 (Python style guide checker):  http://pep8.readthedocs.org/
+.. _Coverage (Code coverage measurement for Python): http://nedbatchelder.com/code/coverage/
+.. _Sphinx (Python Documentation Generator): http://sphinx-doc.org/
