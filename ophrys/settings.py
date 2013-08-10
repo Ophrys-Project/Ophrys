@@ -23,6 +23,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ophrys.accounts',
+    'ophrys.calendarevent',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -40,9 +41,9 @@ ROOT_URLCONF = 'ophrys.urls'
 # Internationalization
 # https://docs.djangoproject.com/en/dev/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'de-DE'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Berlin'
 
 USE_I18N = True
 
