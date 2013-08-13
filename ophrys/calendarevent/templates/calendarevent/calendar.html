@@ -1,1 +1,8 @@
-{{ html_calendar }}
+{% extends 'base.html' %}
+
+{% block 'body' %}
+    <h1>Calendar</h1>
+    <p><a href="{% url 'calendar' previous_month.year previous_month.month %}">{{ previous_month|date:"F Y" }}</a></p>
+    {{ html_calendar }}
+    <p><a href="{% url 'calendar' next_month.year next_month.month %}">{{ next_month|date:"F Y" }}</a></p>
+{% endblock %}
