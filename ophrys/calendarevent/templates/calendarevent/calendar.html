@@ -4,8 +4,8 @@
 
 {% block 'body' %}
     <h1>Calendar</h1>
-    <p><a href="{% url 'ophrys.calendarevent.models.Event.create' %}">{% trans 'Create a new event' %}</a></p>
-    <p><a href="{% url 'calendar' previous_month.year previous_month.month %}">{{ previous_month|date:"F Y" }}</a></p>
+    <p><a href="{% url 'ophrys.calendarevent:Event:create' %}">{% trans 'Create a new event' %}</a></p>
+    <p><a href="{% url 'ophrys.calendarevent:calendar' previous_month.year previous_month.month %}">{{ previous_month|date:"F Y" }}</a></p>
     {{ html_calendar }}
-    <p><a href="{% url 'calendar' next_month.year next_month.month %}">{{ next_month|date:"F Y" }}</a></p>
+    <p><a href="{% url 'ophrys.calendarevent:calendar' next_month.year next_month.month %}">{{ next_month|date:"F Y" }}</a></p>
 {% endblock %}

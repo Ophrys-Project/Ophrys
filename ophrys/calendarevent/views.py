@@ -70,4 +70,4 @@ class EventUpdate(UpdateView):
 
 class EventDelete(DeleteView):
     model = Event
-    success_url_name = 'calendar_default'
+    success_url_name = 'ophrys.calendarevent:calendar_default'
