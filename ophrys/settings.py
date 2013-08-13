@@ -61,3 +61,9 @@ STATIC_URL = '/static/'
 # Authentication setting
 
 AUTH_USER_MODEL = 'accounts.User'
+
+# Template system
+
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'ophrys', 'templates'),
+)
