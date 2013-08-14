@@ -4,6 +4,6 @@
 
 {% block 'body' %}
     {{ event }}
-    <p><a href="{% url 'ophrys.calendarevent.models.Event.update' event.pk %}">{% trans 'Update' %}</a></p>
-    <p><a href="{% url 'ophrys.calendarevent.models.Event.delete' event.pk %}">{% trans 'Delete' %}</a></p>
+    <p><a href="{% url 'ophrys.calendarevent:Event:update' event.pk %}">{% trans 'Update' %}</a></p>
+    <p><a href="{% url 'ophrys.calendarevent:Event:delete' event.pk %}">{% trans 'Delete' %}</a></p>
 {% endblock %}

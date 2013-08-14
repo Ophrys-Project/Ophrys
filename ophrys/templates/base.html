@@ -1,13 +1,26 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html lang="{{ LANGUAGE_CODE }}">
 <head>
-    <meta charset="uft-8">
+    <meta charset="UTF-8">
     {% block 'head' %}
-        <title>Ophrys</title>
+        <title>{% block 'title' %}Ophrys{% endblock %}</title>
+        {% block 'meta' %}
+            <meta name="author" content="">
+            <meta name="description" content="">
+            <meta name="generator" content="Ophrys">
+            <meta name="keywords" content="">
+            <meta name="robots" content="">
+            <meta name="viewport" content="">
+        {% endblock %}
+        {% block 'stylesheets' %}
+            <link rel="stylesheet" href="">
+        {% endblock %}
     {% endblock %}
 </head>
 <body>
-    {% block 'body' %}
+    {% block 'body' %}{% endblock %}
+    {% block 'scripts' %}
+        <script src=""></script>
     {% endblock %}
 </body>
 </html>
