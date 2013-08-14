@@ -1,8 +1,9 @@
 from calendar import HTMLCalendar as _HTMLCalendar
 
 from django.utils.safestring import mark_safe
+from django.utils.timezone import localtime
 
-from ophrys.utils.views import MonthArchiveView, CreateView, DetailView, UpdateView, DeleteView
+from ophrys.utils.views import MonthArchiveView
 
 from .models import Event
 
@@ -49,25 +50,8 @@ class HTMLCalendar(_HTMLCalendar):
     def get_day_content(self, day):
         event_list = []
         for event in self.view_instance.object_list:  # Check whether there is another var than object_list
-            if event.begin.day == day:
+            if localtime(event.begin).day == day:
                 event_list.append(
                     '<a href="%(url)s">%(title)s</a>' % {'title': event.title,
                                                          'url': event.get_absolute_url()})
         return '%d %s' % (day, ' '.join(event_list))
-
-
-class EventCreate(CreateView):
-    model = Event
-
-
-class EventDetail(DetailView):
-    model = Event
-
-
-class EventUpdate(UpdateView):
-    model = Event
-
-
-class EventDelete(DeleteView):
-    model = Event
-    success_url_name = 'ophrys.calendarevent:calendar_default'
