@@ -25,6 +25,16 @@ class CalendarTest(TestCase):
         self.assertNotContains(response, '<a href="/calendar/event/1/">Oochai4aigohheiXohpe</a>')
         self.assertContains(response, '<a href="/calendar/event/2/">ahba2Ahzee5Ochohth8u</a>')
 
+    def test_calender_view_first_of_month(self):
+        event = Event.objects.create(title='looCethie3eech0loayu', begin=datetime.datetime(2013, 11, 30, 23, 59, tzinfo=utc))
+        # Default: TIME_ZONE='Europe/Berlin'
+        response = self.client.get('/calendar/2013-12/')
+        self.assertContains(response, '1 <a href="/calendar/event/1/">looCethie3eech0loayu</a>')
+        # Custom: TIME_ZONE='Europe/London'
+        with self.settings(TIME_ZONE='Europe/London'):
+            response = self.client.get('/calendar/2013-11/')
+            self.assertContains(response, '30 <a href="/calendar/event/1/">looCethie3eech0loayu</a>')
+
 
 class EventTest(TestCase):
     def setUP(self):
@@ -60,5 +70,5 @@ class EventTest(TestCase):
         response = self.client.get('/calendar/event/1/delete/')
         self.assertTemplateUsed(response, 'calendarevent/event_confirm_delete.html')
         response = self.client.post('/calendar/event/1/delete/')
-        self.assertRedirects(response, '/calendar/')
+        self.assertRedirects(response, '/calendar/event/')
         self.assertFalse(Event.objects.filter(title='ohW9eidie7Uatoot9eem').exists())
