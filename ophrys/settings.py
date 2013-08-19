@@ -24,6 +24,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'ophrys.accounts',
     'ophrys.calendarevent',
+    'ophrys.core',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -51,6 +52,9 @@ USE_L10N = True
 
 USE_TZ = True
 
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'ophrys', 'locale'),
+)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/dev/howto/static-files/
@@ -67,3 +71,15 @@ AUTH_USER_MODEL = 'accounts.User'
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'ophrys', 'templates'),
 )
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    # Django's default
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'django.core.context_processors.tz',
+    'django.contrib.messages.context_processors.messages',
+    # Custom
+    'ophrys.core.config.context_processor')

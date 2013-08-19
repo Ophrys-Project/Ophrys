@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% load i18n %}
+
+{% block 'body' %}
+    <form action="" method="post">{% csrf_token %}
+        {{ form.non_field_errors }}
+        {% for config_group in config_groups %}
+            <fieldset>
+                <legend>{{ config_group.title }}</legend>
+                {% for field in form %}
+                    {% if field.name in config_group %}
+                        <p>
+                            {{ field.errors }}
+                            {{ field.label_tag }}
+                            {{ field }}
+                            {{ field.help_text }}
+                        </p>
+                    {% endif %}
+                {% endfor %}
+            </fieldset>
+        {% endfor %}
+        <input type="submit" value="{% trans 'Submit' %}" />
+    </form>
+{% endblock %}
