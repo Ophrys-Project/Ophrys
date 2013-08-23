@@ -1,0 +1,45 @@
+# Language file for Ophrys, used by Transifex
+# Copyright (C) 2013 Authors of Ophrys, see AUTHORS
+# This file is distributed under the same license as the Ophrys package.
+#
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-08-23 20:02+0200\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: calendarevent/models.py:13 calendarevent/models.py:29
+msgid "Maximum 255 characters"
+msgstr ""
+
+#: calendarevent/models.py:44
+msgid "Duration of the event in minutes"
+msgstr ""
+
+#: calendarevent/templates/calendarevent/calendar.html:7
+msgid "Create a new event"
+msgstr ""
+
+#: calendarevent/templates/calendarevent/event_confirm_delete.html:7
+#, python-format
+msgid "Are you sure you want to delete \"%(event)s\"?"
+msgstr ""
+
+#: calendarevent/templates/calendarevent/event_confirm_delete.html:8
+msgid "Confirm"
+msgstr ""
+
+#: calendarevent/templates/calendarevent/event_detail.html:7
+msgid "Update"
+msgstr ""
+
+#: calendarevent/templates/calendarevent/event_detail.html:8
+msgid "Delete"
+msgstr ""
+
+#: calendarevent/templates/calendarevent/event_form.html:8
+msgid "Submit"
+msgstr ""

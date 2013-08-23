@@ -33,7 +33,7 @@ To get the development version of this project, run the following commands::
   $ cd Ophrys
   $ virtualenv --python=python3 .virtualenv
   $ source .virtualenv/bin/activate
-  $ pip install https://www.djangoproject.com/download/1.6b1/tarball/
+  $ pip install https://www.djangoproject.com/download/1.6b2/tarball/
   $ pip install -r requirements.txt
   $ python create_custom_directory.py
 
@@ -67,6 +67,7 @@ Ophrys uses:
 * `Travis CI`_
 * `Coveralls`_
 * `Read the Docs`_
+* `Transifex`_
 
 .. _Python Programming Language: http://python.org/
 .. _Django: https://www.djangoproject.com/
@@ -77,3 +78,4 @@ Ophrys uses:
 .. _Travis CI: https://travis-ci.org/
 .. _Coveralls: https://coveralls.io/
 .. _Read the Docs: https://readthedocs.org/
+.. _Transifex: https://www.transifex.com/
