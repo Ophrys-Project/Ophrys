@@ -5,9 +5,12 @@ python:
 install:
   - pip install https://www.djangoproject.com/download/1.6b2/tarball/
   - pip install -r requirements.txt --use-mirrors
+  - pip install coveralls --use-mirrors
   - python create_custom_directory.py
 script:
   - pep8 --max-line-length=150 ophrys
   - pep8 --max-line-length=150 tests
   - coverage run manage.py test --settings="tests.settings"
   - coverage report --show-missing --fail-under=100
+after_success:
+  - coveralls
