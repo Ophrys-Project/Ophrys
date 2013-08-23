@@ -53,8 +53,8 @@ commands you find in the .travis.yml file.
 Good luck.
 
 
-Used Software
--------------
+Used Software and Platforms
+---------------------------
 
 Ophrys uses:
 
@@ -63,9 +63,17 @@ Ophrys uses:
 * `Pep8 (Python style guide checker)`_
 * `Coverage (Code coverage measurement for Python)`_
 * `Sphinx (Python Documentation Generator)`_
+* `GitHub`_
+* `Travis CI`_
+* `Coveralls`_
+* `Read the Docs`_
 
 .. _Python Programming Language: http://python.org/
 .. _Django: https://www.djangoproject.com/
 .. _Pep8 (Python style guide checker):  http://pep8.readthedocs.org/
 .. _Coverage (Code coverage measurement for Python): http://nedbatchelder.com/code/coverage/
 .. _Sphinx (Python Documentation Generator): http://sphinx-doc.org/
+.. _GitHub: https://github.com/
+.. _Travis CI: https://travis-ci.org/
+.. _Coveralls: https://coveralls.io/
+.. _Read the Docs: https://readthedocs.org/
