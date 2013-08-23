@@ -9,6 +9,10 @@ Simple Association Web Content Management System
    :alt: Build Status
    :target: https://travis-ci.org/Ophrys-Project/Ophrys
 
+.. image:: https://coveralls.io/repos/Ophrys-Project/Ophrys/badge.png
+   :alt: Coverage Status
+   :target: https://coveralls.io/r/Ophrys-Project/Ophrys
+
 
 What is Ophrys?
 ---------------
