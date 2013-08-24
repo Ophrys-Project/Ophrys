@@ -1,5 +1,5 @@
 from django.core.urlresolvers import reverse
-from django.views.generic import ListView, CreateView, DetailView, UpdateView, MonthArchiveView
+from django.views.generic import ListView, CreateView, DetailView, UpdateView, MonthArchiveView, FormView
 from django.views.generic import DeleteView as _DeleteView
 
 

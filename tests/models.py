@@ -17,3 +17,9 @@ class TestModelC(AutoModel):
     This model is an AutoModel for testing.
     """
     name = models.TextField()
+
+
+from .config import config_group_test_one
+"""
+Imports the test config variables to connect the relevant signal.
+"""

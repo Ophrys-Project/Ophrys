@@ -60,6 +60,7 @@ Ophrys uses:
 
 * `Python Programming Language`_
 * `Django`_
+* `Django-Jsonfield (Reusable JSONField() for Django)`_
 * `Pep8 (Python style guide checker)`_
 * `Coverage (Code coverage measurement for Python)`_
 * `Sphinx (Python Documentation Generator)`_
@@ -71,6 +72,7 @@ Ophrys uses:
 
 .. _Python Programming Language: http://python.org/
 .. _Django: https://www.djangoproject.com/
+.. _Django-jsonfield (Reusable JSONField() for Django): https://github.com/bradjasper/django-jsonfield/
 .. _Pep8 (Python style guide checker):  http://pep8.readthedocs.org/
 .. _Coverage (Code coverage measurement for Python): http://nedbatchelder.com/code/coverage/
 .. _Sphinx (Python Documentation Generator): http://sphinx-doc.org/

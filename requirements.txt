@@ -1,5 +1,6 @@
 Django==1.6b2
 pytz==2013b
+jsonfield==0.9.17
 pep8==1.4.6
 coverage==3.6
 Jinja2==2.6

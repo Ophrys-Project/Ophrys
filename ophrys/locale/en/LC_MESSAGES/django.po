@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-23 20:02+0200\n"
+"POT-Creation-Date: 2013-08-23 22:09+0200\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -41,5 +41,10 @@ msgid "Delete"
 msgstr ""
 
 #: calendarevent/templates/calendarevent/event_form.html:8
+#: core/templates/core/config_form.html:23
 msgid "Submit"
+msgstr ""
+
+#: core/config.py:129
+msgid "General settings"
 msgstr ""
