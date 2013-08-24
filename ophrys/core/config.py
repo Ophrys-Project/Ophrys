@@ -6,7 +6,7 @@ from .models import ConfigStore
 from .signals import get_config_groups
 
 
-class Config():
+class Config:
     """
     Container class for all config variables.
 
@@ -52,7 +52,7 @@ serveral variables are attributes of this object.
 """
 
 
-class ConfigVariable():
+class ConfigVariable:
     """
     Simple class for a default config variable.
     """
@@ -74,7 +74,7 @@ class ConfigVariable():
             return forms.CharField(**self.field_kwargs)
 
 
-class ConfigGroup():
+class ConfigGroup:
     """
     Simple class for a group of default config variables.
     """

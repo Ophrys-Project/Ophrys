@@ -1,6 +1,6 @@
 from django.db import models
 
-from ophrys.utils.models import GetAbsoluteUrlMixin, AutoModel
+from ophrys.utils.models import GetAbsoluteUrlMixin, AutoModelMixin
 
 
 class TestModelA(GetAbsoluteUrlMixin, models.Model):
@@ -12,9 +12,9 @@ class TestModelB(GetAbsoluteUrlMixin, models.Model):
     slug = models.SlugField()
 
 
-class TestModelC(AutoModel):
+class TestModelC(AutoModelMixin, models.Model):
     """
-    This model is an AutoModel for testing.
+    This model is mixed with AutoModelMixin for testing.
     """
     name = models.TextField()
 

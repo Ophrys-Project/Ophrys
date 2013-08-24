@@ -43,11 +43,11 @@ class GetAbsoluteUrlMixin:
         return '%s:%s:%s' % (project_app_name, class_name, url_name)
 
 
-class AutoModel(GetAbsoluteUrlMixin, models.Model):
+class AutoModelMixin(GetAbsoluteUrlMixin):
     """
-    Abstract class for models with automaticly designed urls and views.
+    Mixin for models to add automaticly designed urls and views.
 
-    Subclass your model from this class and include YourModel().urls in the
+    Add this mixin to your model and include YourModel().urls in the
     urlpatterns of your application::
 
       url(r'^example/', include(YourModel().urls))
@@ -66,13 +66,10 @@ class AutoModel(GetAbsoluteUrlMixin, models.Model):
 
       url(r'^example_app/', include(yourproject.yourapp.urls), namespace='yourproject.yourapp')
     """
-    class Meta:
-        abstract = True
-
     @property
     def urls(self):
         """
-        Attribute of AutoModel models. Include this in the urlpatterns of
+        Attribute of mixed models. Include this in the urlpatterns of
         your application::
 
           url(r'^example/', include(YourModel().urls))
