@@ -5,7 +5,7 @@ from django.test.client import Client
 from tests.models import TestModelC
 
 
-class AutoModelViewsTest(TestCase):
+class AutoModelMixinViewsTest(TestCase):
     urls = 'tests.urls'
 
     def setUp(self):

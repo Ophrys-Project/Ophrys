@@ -21,7 +21,7 @@ class GetAbsoluteUrlMixinTest(TestCase):
         self.assertEqual(test_object.get_absolute_url(url_name='update'), '/test_model/test_model_b/xoorumi8Thei5ayei5io/kel7EiMaek2thahf8aoy/')
 
 
-class AutoModelTest(TestCase):
+class AutoModelMixinTest(TestCase):
     def test_get_view_class(self):
         test_object = TestModelC.objects.create(name='xoo8aing6iecheizeeDu')
         self.assertRaisesMessage(

@@ -3,7 +3,7 @@ import datetime
 from django.db import models
 from django.utils.translation import ugettext_lazy
 
-from ophrys.utils.models import GetAbsoluteUrlMixin, AutoModel
+from ophrys.utils.models import AutoModelMixin
 
 
 class Tag(models.Model):
@@ -22,7 +22,7 @@ class Tag(models.Model):
         return self.name
 
 
-class Event(AutoModel):
+class Event(AutoModelMixin, models.Model):
     """
     Model for an event in the community.
     """
