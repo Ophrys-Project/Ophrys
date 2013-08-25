@@ -3,13 +3,15 @@ import datetime
 from django.test import TestCase
 from django.utils.timezone import now, utc
 
-from ophrys.calendarevent.models import Tag, Event
+from ophrys.calendarevent.models import Event
+from ophrys.core.models import Tag
 
 
 class TestTag(TestCase):
-    def test_str(self):
-        Tag.objects.create(name='ohput4chahFaeGh7ieng')
-        self.assertEqual(str(Tag.objects.get(pk=1)), 'ohput4chahFaeGh7ieng')
+    def test_add_tag(self):
+        event = Event.objects.create(title='ohput4chahFaeGh7ieng', begin=now())
+        event.add_tag('oxgath4VohheeYahxeiW')
+        self.assertTrue(Tag.objects.get(name='oxgath4VohheeYahxeiW') in event.get_tags())
 
 
 class TestEvent(TestCase):
