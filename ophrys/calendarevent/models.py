@@ -3,26 +3,11 @@ import datetime
 from django.db import models
 from django.utils.translation import ugettext_lazy
 
+from ophrys.core.models import TaggedModel
 from ophrys.utils.models import AutoModelMixin
 
 
-class Tag(models.Model):
-    """
-    Model for event tags.
-    """
-    name = models.CharField(max_length=255, help_text=ugettext_lazy('Maximum 255 characters'))
-    """
-    Name of the event tag, a string up to 255 characters.
-    """
-
-    class Meta:
-        ordering = ('name',)
-
-    def __str__(self):
-        return self.name
-
-
-class Event(AutoModelMixin, models.Model):
+class Event(AutoModelMixin, TaggedModel):
     """
     Model for an event in the community.
     """
@@ -44,11 +29,6 @@ class Event(AutoModelMixin, models.Model):
     duration = models.IntegerField(null=True, blank=True, help_text=ugettext_lazy('Duration of the event in minutes'))
     """
     Duration of the event in minutes.
-    """
-
-    tags = models.ManyToManyField(Tag, null=True, blank=True, related_name='events')
-    """
-    One or more tags related to the event. The tags are instances of the Tag model.
     """
 
     class Meta:

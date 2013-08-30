@@ -1,5 +1,6 @@
 from django.db import models
 
+from ophrys.core.models import TaggedModel
 from ophrys.utils.models import GetAbsoluteUrlMixin, AutoModelMixin
 
 
@@ -15,6 +16,13 @@ class TestModelB(GetAbsoluteUrlMixin, models.Model):
 class TestModelC(AutoModelMixin, models.Model):
     """
     This model is mixed with AutoModelMixin for testing.
+    """
+    name = models.TextField()
+
+
+class TestModelD(TaggedModel):
+    """
+    This model is a tagged model for testing.
     """
     name = models.TextField()
 
